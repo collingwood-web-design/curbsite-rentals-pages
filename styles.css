@@ -257,6 +257,37 @@ p:last-child {
   color: var(--black);
 }
 
+.btn-primary {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+.btn-primary:hover {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.nav-book {
+  min-height: 2.6rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.82rem;
+  border-color: var(--blue);
+  background: transparent;
+  color: var(--black);
+  box-shadow: none;
+}
+
+.nav-book:hover {
+  border-color: var(--blue);
+  background: transparent;
+  color: var(--black);
+  box-shadow: none;
+}
+
 .btn-secondary {
   background: transparent;
   color: var(--black);
@@ -405,7 +436,8 @@ p:last-child {
 }
 
 .hero .btn-primary,
-.meet-hero .btn-primary {
+.meet-hero .btn-primary,
+.truck-hero .btn-primary {
   background: var(--blue);
   border-color: var(--blue);
   color: var(--white);
@@ -413,7 +445,8 @@ p:last-child {
 }
 
 .hero .btn-primary:hover,
-.meet-hero .btn-primary:hover {
+.meet-hero .btn-primary:hover,
+.truck-hero .btn-primary:hover {
   background: var(--black);
   border-color: var(--black);
   color: var(--white);
@@ -611,6 +644,12 @@ p:last-child {
   border-left-color: var(--blue);
   border-bottom-color: var(--blue);
   top: 0.55rem;
+}
+
+.meet-highlights {
+  columns: 1 !important;
+  max-width: 22rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 /* Feature grid */
@@ -820,6 +859,267 @@ p:last-child {
   color: var(--black);
 }
 
+.cta-band-light {
+  background: var(--off-white);
+  color: var(--black);
+}
+
+.cta-band-light h2 {
+  color: var(--black);
+}
+
+.cta-band-light p {
+  color: var(--gray);
+}
+
+.cta-band-light .btn-secondary {
+  background: transparent;
+  border-color: var(--black);
+  color: var(--black);
+}
+
+.cta-band-light .btn-secondary:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.cta-band-light .btn-primary:hover {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+}
+
+.cta-band-light .cta-checks {
+  margin: 0 0 1rem;
+}
+
+.cta-band-light .cta-checks li {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.cta-band-light .cta-checks li::before {
+  border-left-color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+.cta-band-light .cta-contact {
+  margin: 0;
+}
+
+.cta-band-light .cta-contact .text-link {
+  color: var(--black);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* The Truck page */
+.truck-hero {
+  padding: calc(var(--header-h) + clamp(2rem, 5vw, 3.5rem)) 0 clamp(2.5rem, 5vw, 4rem);
+  background: var(--white);
+}
+
+.truck-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.truck-hero .eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.truck-hero h1 {
+  max-width: none;
+  text-transform: none;
+  font-family: var(--font);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.65rem;
+}
+
+.truck-subhead {
+  margin: 0 0 0.85rem;
+  font-family: var(--font);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--black);
+}
+
+.truck-hero .lede {
+  max-width: 28rem;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+.truck-hero-media {
+  margin: 0;
+  overflow: visible;
+  background: var(--white);
+}
+
+.truck-hero-media img {
+  width: 100%;
+  height: auto;
+  max-height: min(480px, 58vw);
+  object-fit: contain;
+  object-position: center;
+}
+
+.specs-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+.spec-table {
+  margin: 0;
+}
+
+.spec-table > div {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 0.75rem 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.spec-table dt {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.spec-table dd {
+  margin: 0;
+  color: var(--gray);
+}
+
+.specs-features {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.spec-card figure {
+  margin: 0 0 0.85rem;
+  overflow: hidden;
+  background: #ececec;
+}
+
+.spec-card img {
+  width: 100%;
+  height: min(220px, 40vw);
+  object-fit: cover;
+  object-position: center;
+}
+
+.spec-card h3 {
+  margin-bottom: 0.35rem;
+}
+
+.spec-card p {
+  margin: 0;
+}
+
+.perfect-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem 1rem;
+}
+
+.perfect-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: center;
+  font-family: var(--font);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  line-height: 1.25;
+  color: var(--black);
+}
+
+.perfect-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.perfect-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem 1.5rem;
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 0;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 1.15rem;
+  font-weight: 700;
+  color: var(--black);
+  position: relative;
+  padding-right: 2.75rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.15rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--blue);
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 1.15rem 1.15rem;
+  color: var(--gray);
+}
+
 /* Inner pages */
 .page-hero {
   padding: calc(var(--header-h) + 2.5rem) 0 2rem;
@@ -928,6 +1228,42 @@ p:last-child {
   font-weight: 600;
 }
 
+.footer-serving,
+.footer-owner,
+.footer-tagline {
+  color: var(--white) !important;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.15rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  color: var(--white);
+  opacity: 0.9;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease), opacity 0.2s var(--ease);
+}
+
+.social-icon:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  opacity: 1;
+}
+
+.social-icon svg {
+  display: block;
+}
+
 .footer-label {
   margin: 0 0 0.75rem !important;
   font-size: 0.75rem;
@@ -1004,6 +1340,21 @@ a.text-link[href^="mailto:"] {
 @media (max-width: 900px) {
   .split {
     grid-template-columns: 1fr;
+  }
+
+  .truck-hero-inner,
+  .specs-layout,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perfect-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .truck-hero-media img {
+    height: auto;
+    max-height: min(360px, 78vw);
   }
 
   /* Stacked hero: image + headline overlay, copy below */
@@ -1232,7 +1583,8 @@ a.text-link[href^="mailto:"] {
 
   .feature-grid,
   .location-grid,
-  .footer-grid {
+  .footer-grid,
+  .perfect-grid {
     grid-template-columns: 1fr;
   }
 
