@@ -974,6 +974,91 @@ p:last-child {
   object-position: center;
 }
 
+/* Truck photo carousel */
+.truck-carousel {
+  position: relative;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  background: var(--off-white);
+}
+
+.carousel-track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  transition: transform 0.45s var(--ease);
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: min(460px, 56vw);
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--black);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.carousel-arrow:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.carousel-prev {
+  left: 0.85rem;
+}
+
+.carousel-next {
+  right: 0.85rem;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.carousel-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  padding: 0;
+  border: 1.5px solid var(--blue);
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s var(--ease);
+}
+
+.carousel-dot[aria-current="true"] {
+  background: var(--blue);
+}
+
 .specs-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
@@ -1355,6 +1440,15 @@ a.text-link[href^="mailto:"] {
   .truck-hero-media img {
     height: auto;
     max-height: min(360px, 78vw);
+  }
+
+  .carousel-slide img {
+    height: min(360px, 72vw);
+  }
+
+  .carousel-arrow {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
   /* Stacked hero: image + headline overlay, copy below */

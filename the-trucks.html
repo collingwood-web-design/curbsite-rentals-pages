@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=56" />
+  <link rel="stylesheet" href="styles.css?v=57" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -39,9 +39,34 @@
           <p class="lede">Built for delivery and moving professionals who need space, access, and reliability.</p>
           <a class="btn btn-primary" href="booking.html">Book a truck</a>
         </div>
-        <figure class="truck-hero-media">
-          <img src="assets/images/the-trucks-hero.jpg" alt="White Curbside Rentals step van" width="1200" height="800" />
-        </figure>
+        <div class="truck-carousel" data-carousel aria-roledescription="carousel" aria-label="Curbside Rentals truck photos">
+          <div class="carousel-viewport">
+            <ul class="carousel-track" data-carousel-track>
+              <li class="carousel-slide" data-carousel-slide>
+                <img src="assets/images/trucks/truck-front-angle.jpg" alt="Curbside Rentals step van, front three-quarter view" width="828" height="729" />
+              </li>
+              <li class="carousel-slide" data-carousel-slide>
+                <img src="assets/images/trucks/truck-driver-side.jpg" alt="Curbside Rentals step van, driver side view" width="828" height="729" loading="lazy" />
+              </li>
+              <li class="carousel-slide" data-carousel-slide>
+                <img src="assets/images/trucks/truck-front.jpg" alt="Curbside Rentals step van, front view" width="828" height="729" loading="lazy" />
+              </li>
+              <li class="carousel-slide" data-carousel-slide>
+                <img src="assets/images/trucks/truck-rear-side.jpg" alt="Curbside Rentals step van, rear side view with logo" width="828" height="729" loading="lazy" />
+              </li>
+              <li class="carousel-slide" data-carousel-slide>
+                <img src="assets/images/trucks/truck-rear.jpg" alt="Curbside Rentals step van, rear roll-up door" width="828" height="729" loading="lazy" />
+              </li>
+            </ul>
+          </div>
+          <button class="carousel-arrow carousel-prev" type="button" data-carousel-prev aria-label="Previous photo">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="carousel-arrow carousel-next" type="button" data-carousel-next aria-label="Next photo">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+          <div class="carousel-dots" data-carousel-dots></div>
+        </div>
       </div>
     </section>
 
@@ -252,6 +277,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
