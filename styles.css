@@ -1208,7 +1208,11 @@ p:last-child {
 /* Inner pages */
 .page-hero {
   padding: calc(var(--header-h) + 2.5rem) 0 2rem;
-  border-bottom: 1px solid var(--line);
+}
+
+.page-hero h1 {
+  max-width: none;
+  white-space: nowrap;
 }
 
 .brand-lockup {
@@ -1219,7 +1223,8 @@ p:last-child {
 }
 
 .page-hero .lede {
-  max-width: 38rem;
+  max-width: none;
+  white-space: nowrap;
   font-size: 1.125rem;
 }
 
@@ -1243,34 +1248,101 @@ p:last-child {
 }
 
 .booking-panel {
-  max-width: 40rem;
+  max-width: 56rem;
 }
 
-.booking-placeholder {
-  padding: 2rem;
-  border: 1px solid var(--line);
+.booking-section {
+  padding-top: 0;
+}
+
+.booking-truck {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  align-items: center;
+}
+
+.booking-truck-media {
+  margin: 0;
+  overflow: hidden;
   background: var(--off-white);
 }
 
-.booking-placeholder h2 {
-  text-align: left;
+.booking-truck-media img {
+  width: 100%;
+  height: min(420px, 58vw);
+  object-fit: cover;
+  object-position: center;
+}
+
+.booking-truck-copy .eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.booking-truck-copy h2 {
+  margin: 0 0 0.85rem;
+  font-family: var(--font);
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-transform: none;
   max-width: none;
+}
+
+.booking-truck-copy .lede {
+  margin: 0 0 1.15rem;
+  max-width: 28rem;
+  color: var(--black);
+}
+
+.booking-rate {
+  margin: 0 0 1.25rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.booking-rate-amount {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--black);
+}
+
+.booking-rate-unit {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.booking-truck-action {
+  max-width: 22rem;
+}
+
+.booking-help {
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.booking-help p {
+  margin: 0;
+  max-width: 36rem;
+  color: var(--gray);
 }
 
 .booking-contacts {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.5rem;
-}
-
-.booking-placeholder iframe {
-  display: block;
-  width: 100%;
-  min-height: 640px;
-  margin-top: 1.5rem;
-  border: 1px solid var(--line);
-  background: var(--white);
+  margin-top: 1.15rem;
 }
 
 /* Footer */
@@ -1429,7 +1501,8 @@ a.text-link[href^="mailto:"] {
 
   .truck-hero-inner,
   .specs-layout,
-  .faq-grid {
+  .faq-grid,
+  .booking-truck {
     grid-template-columns: 1fr;
   }
 
@@ -1635,6 +1708,14 @@ a.text-link[href^="mailto:"] {
 @media (max-width: 720px) {
   :root {
     --shell: min(1120px, calc(100% - 1.5rem));
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .page-hero .lede {
+    white-space: normal;
   }
 
   .nav-toggle {

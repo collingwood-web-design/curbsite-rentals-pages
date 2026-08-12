@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Booking | Curbside Rentals</title>
-  <meta name="description" content="Book Curbside Rentals trucks. Online booking coming soon—call or email Candice O'Sullivan to reserve today." />
+  <meta name="description" content="Book Curbside Rentals trucks online. Check availability and reserve a commercial step van with Candice O'Sullivan." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=57" />
+  <link rel="stylesheet" href="styles.css?v=62" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -32,32 +32,34 @@
   <main id="main">
     <section class="page-hero">
       <div class="shell">
-        <img class="brand-lockup" src="assets/logo/Curbside-Rentals-logo.svg" alt="Curbside Rentals" width="500" height="169" />
         <h1>Book a truck.</h1>
-        <p class="lede">Online booking will open here once the booking platform is confirmed—either as an embedded scheduler or a link out to the booking site.</p>
+        <p class="lede">Check availability and reserve online. Prefer to talk it through? Call or email Candice anytime.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section booking-section">
       <div class="shell booking-panel">
-        <!--
-          When the booking platform is confirmed, replace this panel with either:
-          1) An iframe embed, or
-          2) A prominent button linking to the external booking URL.
-        -->
-        <div class="booking-placeholder" id="booking-embed">
-          <h2>Booking platform coming soon</h2>
-          <p>In the meantime, reserve by phone or email. Candice will confirm availability and next steps.</p>
+        <article class="booking-truck" aria-label="Curbside Rentals truck">
+          <figure class="booking-truck-media">
+            <img src="assets/images/trucks/truck-front-angle.jpg" alt="Curbside Rentals commercial step van" width="828" height="729" />
+          </figure>
+          <div class="booking-truck-copy">
+            <p class="eyebrow">The Trucks</p>
+            <h2>18 ft Commercial Step Van</h2>
+            <p class="lede">Built for delivery and moving professionals who need space, access, and reliability.</p>
+            <p class="booking-rate"><span class="booking-rate-amount">$150</span> <span class="booking-rate-unit">/ day</span></p>
+            <div class="booking-truck-action">
+              <div class="booqable-product-button" data-id="4d5f7567-dd79-4cd1-bc7c-021000049cb4"></div>
+            </div>
+          </div>
+        </article>
+
+        <div class="booking-help">
+          <p>Need help with dates, fleet needs, or a longer rental? Reach Candice directly.</p>
           <div class="booking-contacts">
             <a class="btn btn-primary" href="tel:+15192886651">Call 519-288-6651</a>
             <a class="btn btn-secondary" href="mailto:info@curbsiderentalsinc.com">Email info@curbsiderentalsinc.com</a>
           </div>
-          <!-- Example external link (uncomment and set URL when ready):
-          <a class="btn btn-primary" href="https://BOOKING-URL-HERE" target="_blank" rel="noopener noreferrer">Continue to booking</a>
-          -->
-          <!-- Example embed (uncomment and set src when ready):
-          <iframe title="Curbside Rentals booking" src="https://BOOKING-URL-HERE" loading="lazy"></iframe>
-          -->
         </div>
       </div>
     </section>
@@ -106,5 +108,6 @@
   </footer>
 
   <script src="script.js?v=3"></script>
+  <script src="https://bcf3bd6a-3068-42ef-9180-2cb0b3b08385.assets.booqable.com/v2/booqable.js"></script>
 </body>
 </html>
