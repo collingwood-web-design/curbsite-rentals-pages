@@ -864,6 +864,17 @@ p:last-child {
   color: var(--black);
 }
 
+.section-cta-full {
+  padding-top: clamp(3.5rem, 8vw, 5.5rem);
+  background: var(--off-white);
+}
+
+.section-cta-full .cta-band-light {
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .cta-band-light h2 {
   color: var(--black);
 }
@@ -1063,7 +1074,7 @@ p:last-child {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   gap: clamp(2rem, 5vw, 3.5rem);
-  align-items: start;
+  align-items: stretch;
 }
 
 .spec-table {
@@ -1092,13 +1103,49 @@ p:last-child {
   color: var(--gray);
 }
 
-.specs-features {
-  display: grid;
-  gap: 1.5rem;
+.specs-feature {
+  display: flex;
+  flex-direction: column;
 }
 
-.spec-card figure {
+.specs-media {
   margin: 0 0 0.85rem;
+  overflow: hidden;
+  background: #ececec;
+  flex: 1 1 auto;
+}
+
+.specs-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 28rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.specs-feature h3 {
+  margin-bottom: 0.35rem;
+}
+
+.specs-feature p {
+  margin: 0;
+}
+
+.specs-features {
+  display: grid;
+  gap: 1.15rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.spec-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.spec-card {
+  margin: 0;
   overflow: hidden;
   background: #ececec;
 }
@@ -1110,11 +1157,17 @@ p:last-child {
   object-position: center;
 }
 
-.spec-card h3 {
+.spec-pair-copy {
+  text-align: center;
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+.spec-pair-copy h3 {
   margin-bottom: 0.35rem;
 }
 
-.spec-card p {
+.spec-pair-copy p {
   margin: 0;
 }
 
@@ -1212,7 +1265,6 @@ p:last-child {
 
 .page-hero h1 {
   max-width: none;
-  white-space: nowrap;
 }
 
 .brand-lockup {
@@ -1224,7 +1276,6 @@ p:last-child {
 
 .page-hero .lede {
   max-width: none;
-  white-space: nowrap;
   font-size: 1.125rem;
 }
 
@@ -1322,20 +1373,86 @@ p:last-child {
   color: var(--gray);
 }
 
-.booking-truck-action {
-  max-width: 22rem;
+.rate-grid {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
 }
 
-.booking-help {
-  margin-top: 2.5rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--line);
+.rate-grid li {
+  background: var(--white);
+  padding: 1.35rem 1.15rem 1.2rem;
+  text-align: center;
 }
 
-.booking-help p {
+.rate-label {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.rate-value {
   margin: 0;
-  max-width: 36rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 3vw, 2.45rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--black);
+}
+
+.rate-unit {
+  margin: 0.4rem 0 0;
+  font-size: 0.92rem;
+  font-weight: 600;
   color: var(--gray);
+}
+
+.rate-note {
+  margin: 0 0 1.75rem;
+  max-width: 46rem;
+}
+
+.delivery-band {
+  display: grid;
+  grid-template-columns: minmax(10rem, 16rem) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  align-items: center;
+  padding: 1.5rem 1.75rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.delivery-price {
+  text-align: center;
+}
+
+.delivery-copy p {
+  margin: 0 0 0.65rem;
+  max-width: 40rem;
+}
+
+.delivery-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.rental-checks {
+  columns: 2;
+  column-gap: clamp(2rem, 5vw, 4rem);
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.rental-note {
+  margin-top: 1.15rem;
+  font-size: 0.95rem;
 }
 
 .booking-contacts {
@@ -1504,6 +1621,24 @@ a.text-link[href^="mailto:"] {
   .faq-grid,
   .booking-truck {
     grid-template-columns: 1fr;
+  }
+
+  .rate-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .delivery-band {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .delivery-copy p {
+    margin-inline: auto;
+  }
+
+  .specs-media img {
+    min-height: 18rem;
+    height: min(28rem, 70vw);
   }
 
   .perfect-grid {
@@ -1712,6 +1847,15 @@ a.text-link[href^="mailto:"] {
 
   .page-hero h1 {
     font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .spec-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .rental-checks {
+    columns: 1;
+    max-width: 26rem;
   }
 
   .page-hero .lede {
