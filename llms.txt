@@ -1,0 +1,23 @@
+# Curbside Rentals
+
+Curbside Rentals Inc. rents commercial step vans to delivery and moving businesses in Central Ontario.
+
+- Owner: Candice O'Sullivan
+- Phone: 519-288-6651
+- Email: candice@curbsiderentalsinc.com
+- Based in Orangeville, Ontario, Canada
+- Service areas: Owen Sound, Barrie, the Greater Toronto Area, and Central Ontario
+- Delivery: trucks are delivered to the customer; local delivery is $100 round trip within 100 km of Orangeville, Ontario
+- Vehicle: 18 ft commercial step van with about 900 cu. ft. cargo space, 120 sq. ft. floor space, and up to 4,000 lb load capacity
+- Daily rental: $150/day plus fees, mileage, delivery, and HST
+- Mileage: $0.99/km with no included free kilometres
+- Fuel: gasoline; return at the same fuel level
+- Security hold: $500 credit card authorization
+- Hours: Monday–Friday 9:00 AM – 5:00 PM; Saturday 9:00 AM – 12:00 PM; Sunday closed
+- Sunday returns are not available
+
+## Pages
+
+- [Home](https://www.curbsiderentalsinc.com/): Overview of Curbside Rentals and step-van features
+- [The Trucks](https://www.curbsiderentalsinc.com/the-trucks.html): Specifications, photos, and FAQs for the 18 ft commercial step van
+- [Request a Truck](https://www.curbsiderentalsinc.com/request-a-truck.html): Rates, delivery, rental policies, and how to request availability

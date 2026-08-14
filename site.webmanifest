@@ -1,0 +1,16 @@
+{
+  "name": "Curbside Rentals",
+  "short_name": "Curbside Rentals",
+  "description": "Commercial step-van rentals for delivery and moving businesses in Orangeville and Central Ontario.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#7dbe5e",
+  "icons": [
+    {
+      "src": "assets/logo/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
