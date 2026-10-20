@@ -1,0 +1,50 @@
+---
+description: Use clean extensionless URLs that work on GH Pages previews and production
+alwaysApply: true
+---
+
+# Clean URLs (required)
+
+Keep on-disk `*.html` files for GitHub Pages. **Never expose `.html` in user-facing links.**
+
+## Two environments
+
+| Environment | Example |
+|---|---|
+| Production | `https://curbsiderentalsinc.com/` |
+| GitHub Pages preview | `https://collingwood-web-design.github.io/curbsite-rentals-pages/` |
+
+## Navigation / in-page links — path-relative (not root-relative)
+
+Root-relative links like `href="/about"` break project previews (they hit `github.io/about` instead of `github.io/curbsite-rentals-pages/about`).
+
+| Instead of | Use |
+|---|---|
+| `href="/about"` | `href="about"` |
+| `href="/"` | `href="./"` |
+| `href="/#section"` | `href="./#section"` |
+| `href="about.html"` | `href="about"` |
+
+Same-page hashes stay `#section`. Do **not** reintroduce `.html` to fix preview issues.
+
+## SEO metadata — always production absolute clean URLs
+
+Canonical, Open Graph, Twitter, JSON-LD, sitemap, and `llms.txt` must use:
+
+`https://curbsiderentalsinc.com/the-trucks`
+
+Never the GitHub Pages preview host, and never `.html`. `www.curbsiderentalsinc.com` redirects to the apex host, so SEO URLs stay on `https://curbsiderentalsinc.com`.
+
+## Assets
+
+Leave `.css`, `.js`, images, fonts, and `.pdf` extensions alone.
+
+## New pages
+
+1. Add `pagename.html` on disk.
+2. Link it as `href="pagename"` (path-relative).
+3. SEO absolute URL: `https://curbsiderentalsinc.com/pagename`.
+4. Update `sitemap.xml` / `llms.txt` with the production clean URL.
+5. Keep the small head script that strips a trailing `.html` from the current path (preserves any `/curbsite-rentals-pages/` prefix).
+
+Helpers: `python scripts/apply-clean-urls.py`, `python scripts/apply-basepath-links.py`, `python scripts/audit-clean-urls.py`, `python scripts/preview-server.py`.

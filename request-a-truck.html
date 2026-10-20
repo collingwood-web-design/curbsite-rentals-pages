@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form (http/https only). */
+      (function () {
+        if (window.location.protocol === "file:") return;
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Request a Truck | Step Van Rental Rates | Curbside Rentals</title>
   <meta name="description" content="Request a Curbside Rentals step van. $150/day plus delivery within 100 km of Orangeville, Ontario. Call or email Candice with your dates and location." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.curbsiderentalsinc.com/request-a-truck.html" />
+  <link rel="canonical" href="https://curbsiderentalsinc.com/request-a-truck" />
   <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
   <meta name="theme-color" content="#7dbe5e" />
@@ -15,12 +28,12 @@
   <meta property="og:locale" content="en_CA" />
   <meta property="og:title" content="Request a Truck | Step Van Rental Rates | Curbside Rentals" />
   <meta property="og:description" content="Request a commercial step van from Curbside Rentals. $150/day. Delivery available within 100 km of Orangeville, Ontario." />
-  <meta property="og:url" content="https://www.curbsiderentalsinc.com/request-a-truck.html" />
-  <meta property="og:image" content="https://www.curbsiderentalsinc.com/assets/images/trucks/truck-front-angle.jpg" />
+  <meta property="og:url" content="https://curbsiderentalsinc.com/request-a-truck" />
+  <meta property="og:image" content="https://curbsiderentalsinc.com/assets/images/trucks/truck-front-angle.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Request a Truck | Curbside Rentals" />
   <meta name="twitter:description" content="Request a commercial step van. $150/day plus delivery. Call or email Candice with your dates." />
-  <meta name="twitter:image" content="https://www.curbsiderentalsinc.com/assets/images/trucks/truck-front-angle.jpg" />
+  <meta name="twitter:image" content="https://curbsiderentalsinc.com/assets/images/trucks/truck-front-angle.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
@@ -31,28 +44,28 @@
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://www.curbsiderentalsinc.com/request-a-truck.html#webpage",
-        "url": "https://www.curbsiderentalsinc.com/request-a-truck.html",
+        "@id": "https://curbsiderentalsinc.com/request-a-truck#webpage",
+        "url": "https://curbsiderentalsinc.com/request-a-truck",
         "name": "Request a Truck | Step Van Rental Rates | Curbside Rentals",
-        "isPartOf": { "@id": "https://www.curbsiderentalsinc.com/#website" },
-        "about": { "@id": "https://www.curbsiderentalsinc.com/#business" }
+        "isPartOf": { "@id": "https://curbsiderentalsinc.com/#website" },
+        "about": { "@id": "https://curbsiderentalsinc.com/#business" }
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.curbsiderentalsinc.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Request a Truck", "item": "https://www.curbsiderentalsinc.com/request-a-truck.html" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://curbsiderentalsinc.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Request a Truck", "item": "https://curbsiderentalsinc.com/request-a-truck" }
         ]
       },
       {
         "@type": "Service",
         "name": "Commercial step van rental",
         "serviceType": "Truck rental",
-        "provider": { "@id": "https://www.curbsiderentalsinc.com/#business" },
+        "provider": { "@id": "https://curbsiderentalsinc.com/#business" },
         "areaServed": "Central Ontario",
         "offers": {
           "@type": "Offer",
-          "url": "https://www.curbsiderentalsinc.com/request-a-truck.html",
+          "url": "https://curbsiderentalsinc.com/request-a-truck",
           "priceCurrency": "CAD",
           "price": "150.00",
           "description": "Daily rental of an 18 ft commercial step van. Licensing fee, environmental fee, mileage, delivery, and HST are additional.",
@@ -108,16 +121,16 @@
 
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="logo" href="index.html">
+      <a class="logo" href="./">
         <img src="assets/logo/Curbside-Rentals-logo.svg" alt="Curbside Rentals" width="500" height="169" />
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <span></span><span></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="the-trucks.html">The Trucks</a>
-        <a class="btn btn-primary nav-book" href="request-a-truck.html" aria-current="page">Request a truck</a>
+        <a href="./">Home</a>
+        <a href="the-trucks">The Trucks</a>
+        <a class="btn btn-primary nav-book" href="request-a-truck" aria-current="page">Request a truck</a>
       </nav>
     </div>
   </header>
@@ -137,9 +150,9 @@
             <img src="assets/images/trucks/truck-front-angle.jpg" alt="Curbside Rentals commercial step van" width="828" height="729" fetchpriority="high" decoding="async" />
           </figure>
           <div class="booking-truck-copy">
-            <p class="eyebrow"><a href="the-trucks.html">The Trucks</a></p>
+            <p class="eyebrow"><a href="the-trucks">The Trucks</a></p>
             <h2>18 ft Commercial Step Van</h2>
-            <p class="lede">Built for delivery and moving professionals who need space, access, and reliability. <a href="the-trucks.html">See full specifications</a>.</p>
+            <p class="lede">Built for delivery and moving professionals who need space, access, and reliability. <a href="the-trucks">See full specifications</a>.</p>
             <p class="booking-rate"><span class="booking-rate-amount">$150</span> <span class="booking-rate-unit">/ day</span></p>
             <div class="booking-contacts">
               <a class="btn btn-primary" href="tel:+15192886651">Call 519-288-6651</a>
@@ -254,7 +267,7 @@
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div>
-        <a class="footer-brand" href="index.html">
+        <a class="footer-brand" href="./">
           <img src="assets/logo/Curbside-Rentals-logo.svg" alt="Curbside Rentals" width="500" height="169" />
         </a>
         <p class="footer-legal">Curbside Rentals Inc.</p>
@@ -290,9 +303,9 @@
       <div>
         <p class="footer-label">Menu</p>
         <nav class="footer-menu" aria-label="Footer">
-          <a href="index.html">Home</a>
-          <a href="the-trucks.html">The Trucks</a>
-          <a href="request-a-truck.html" aria-current="page">Request a truck</a>
+          <a href="./">Home</a>
+          <a href="the-trucks">The Trucks</a>
+          <a href="request-a-truck" aria-current="page">Request a truck</a>
         </nav>
       </div>
     </div>

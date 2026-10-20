@@ -3,4 +3,4 @@ Allow: /
 
 Allow: /assets/
 
-Sitemap: https://www.curbsiderentalsinc.com/sitemap.xml
+Sitemap: https://curbsiderentalsinc.com/sitemap.xml

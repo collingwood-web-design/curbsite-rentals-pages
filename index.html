@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form (http/https only). */
+      (function () {
+        if (window.location.protocol === "file:") return;
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Step Van Rentals in Orangeville, ON | Curbside Rentals</title>
   <meta name="description" content="Curbside Rentals rents 18 ft commercial step vans in Orangeville, ON for delivery and moving businesses. Serving Owen Sound, Barrie, and the GTA." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.curbsiderentalsinc.com/" />
+  <link rel="canonical" href="https://curbsiderentalsinc.com/" />
   <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
   <meta name="theme-color" content="#7dbe5e" />
@@ -15,12 +28,12 @@
   <meta property="og:locale" content="en_CA" />
   <meta property="og:title" content="Step Van Rentals in Orangeville, ON | Curbside Rentals" />
   <meta property="og:description" content="Commercial step-van rentals for delivery and moving businesses across Central Ontario. Call Candice to request a truck." />
-  <meta property="og:url" content="https://www.curbsiderentalsinc.com/" />
-  <meta property="og:image" content="https://www.curbsiderentalsinc.com/assets/images/trucks/truck-front-angle.jpg" />
+  <meta property="og:url" content="https://curbsiderentalsinc.com/" />
+  <meta property="og:image" content="https://curbsiderentalsinc.com/assets/images/trucks/truck-front-angle.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Step Van Rentals in Orangeville, ON | Curbside Rentals" />
   <meta name="twitter:description" content="Commercial step-van rentals for delivery and moving businesses across Central Ontario." />
-  <meta name="twitter:image" content="https://www.curbsiderentalsinc.com/assets/images/trucks/truck-front-angle.jpg" />
+  <meta name="twitter:image" content="https://curbsiderentalsinc.com/assets/images/trucks/truck-front-angle.jpg" />
   <link rel="preload" as="image" href="assets/images/hero-home-5.jpg?v=2" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,14 +45,14 @@
     "@graph": [
       {
         "@type": "AutoRental",
-        "@id": "https://www.curbsiderentalsinc.com/#business",
+        "@id": "https://curbsiderentalsinc.com/#business",
         "name": "Curbside Rentals",
         "legalName": "Curbside Rentals Inc.",
-        "url": "https://www.curbsiderentalsinc.com/",
+        "url": "https://curbsiderentalsinc.com/",
         "telephone": "+1-519-288-6651",
         "email": "candice@curbsiderentalsinc.com",
-        "image": "https://www.curbsiderentalsinc.com/assets/images/trucks/truck-front-angle.jpg",
-        "logo": "https://www.curbsiderentalsinc.com/assets/logo/Curbside-Rentals-logo.svg",
+        "image": "https://curbsiderentalsinc.com/assets/images/trucks/truck-front-angle.jpg",
+        "logo": "https://curbsiderentalsinc.com/assets/logo/Curbside-Rentals-logo.svg",
         "priceRange": "$150/day",
         "openingHoursSpecification": [
           {
@@ -84,18 +97,18 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.curbsiderentalsinc.com/#website",
-        "url": "https://www.curbsiderentalsinc.com/",
+        "@id": "https://curbsiderentalsinc.com/#website",
+        "url": "https://curbsiderentalsinc.com/",
         "name": "Curbside Rentals",
-        "publisher": { "@id": "https://www.curbsiderentalsinc.com/#business" }
+        "publisher": { "@id": "https://curbsiderentalsinc.com/#business" }
       },
       {
         "@type": "WebPage",
-        "@id": "https://www.curbsiderentalsinc.com/#webpage",
-        "url": "https://www.curbsiderentalsinc.com/",
+        "@id": "https://curbsiderentalsinc.com/#webpage",
+        "url": "https://curbsiderentalsinc.com/",
         "name": "Step Van Rentals in Orangeville, ON | Curbside Rentals",
-        "isPartOf": { "@id": "https://www.curbsiderentalsinc.com/#website" },
-        "about": { "@id": "https://www.curbsiderentalsinc.com/#business" }
+        "isPartOf": { "@id": "https://curbsiderentalsinc.com/#website" },
+        "about": { "@id": "https://curbsiderentalsinc.com/#business" }
       }
     ]
   }
@@ -106,16 +119,16 @@
 
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="logo" href="index.html">
+      <a class="logo" href="./">
         <img src="assets/logo/Curbside-Rentals-logo.svg" alt="Curbside Rentals" width="500" height="169" />
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <span></span><span></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="the-trucks.html">The Trucks</a>
-        <a class="btn btn-primary nav-book" href="request-a-truck.html">Request a truck</a>
+        <a href="./" aria-current="page">Home</a>
+        <a href="the-trucks">The Trucks</a>
+        <a class="btn btn-primary nav-book" href="request-a-truck">Request a truck</a>
       </nav>
     </div>
   </header>
@@ -132,7 +145,7 @@
           <span class="hero-line">Ready for the dock.</span>
         </h1>
         <p class="lede hero-lede-reserve">Curbside trucks are designed to help delivery and moving businesses work smarter, load faster, and keep routes moving.</p>
-        <a class="btn btn-primary" href="request-a-truck.html">Request a truck</a>
+        <a class="btn btn-primary" href="request-a-truck">Request a truck</a>
       </div>
     </section>
 
@@ -218,7 +231,7 @@
           <li>Roll-up rear door</li>
           <li>Bulkhead access</li>
         </ul>
-        <a class="btn btn-primary" href="the-trucks.html">View full specifications</a>
+        <a class="btn btn-primary" href="the-trucks">View full specifications</a>
       </div>
     </section>
 
@@ -236,7 +249,7 @@
           </ul>
         </div>
         <div class="cta-actions">
-          <a class="btn btn-primary" href="request-a-truck.html">Request a truck</a>
+          <a class="btn btn-primary" href="request-a-truck">Request a truck</a>
           <a class="btn btn-outline-light" href="tel:+15192886651">Call 519-288-6651</a>
         </div>
       </div>
@@ -246,7 +259,7 @@
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div>
-        <a class="footer-brand" href="index.html">
+        <a class="footer-brand" href="./">
           <img src="assets/logo/Curbside-Rentals-logo.svg" alt="Curbside Rentals" width="500" height="169" />
         </a>
         <p class="footer-legal">Curbside Rentals Inc.</p>
@@ -282,9 +295,9 @@
       <div>
         <p class="footer-label">Menu</p>
         <nav class="footer-menu" aria-label="Footer">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="the-trucks.html">The Trucks</a>
-          <a href="request-a-truck.html">Request a truck</a>
+          <a href="./" aria-current="page">Home</a>
+          <a href="the-trucks">The Trucks</a>
+          <a href="request-a-truck">Request a truck</a>
         </nav>
       </div>
     </div>

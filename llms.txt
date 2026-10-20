@@ -18,6 +18,6 @@ Curbside Rentals Inc. rents commercial step vans to delivery and moving business
 
 ## Pages
 
-- [Home](https://www.curbsiderentalsinc.com/): Overview of Curbside Rentals and step-van features
-- [The Trucks](https://www.curbsiderentalsinc.com/the-trucks.html): Specifications, photos, and FAQs for the 18 ft commercial step van
-- [Request a Truck](https://www.curbsiderentalsinc.com/request-a-truck.html): Rates, delivery, rental policies, and how to request availability
+- [Home](https://curbsiderentalsinc.com/): Overview of Curbside Rentals and step-van features
+- [The Trucks](https://curbsiderentalsinc.com/the-trucks): Specifications, photos, and FAQs for the 18 ft commercial step van
+- [Request a Truck](https://curbsiderentalsinc.com/request-a-truck): Rates, delivery, rental policies, and how to request availability
