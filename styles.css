@@ -1119,6 +1119,11 @@ p:last-child {
   object-position: center;
 }
 
+.carousel-arrow[hidden],
+.carousel-dots[hidden] {
+  display: none;
+}
+
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -1272,6 +1277,30 @@ p:last-child {
 
 .spec-pair-copy p {
   margin: 0;
+}
+
+.driver-carousel {
+  width: min(40rem, 100%);
+  margin-inline: auto;
+}
+
+.driver-carousel .carousel-viewport,
+.driver-carousel .carousel-slide {
+  background: #ececec;
+}
+
+.driver-carousel .carousel-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.driver-carousel .carousel-slide img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 22rem;
+  object-fit: contain;
 }
 
 .perfect-grid {

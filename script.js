@@ -39,7 +39,12 @@
     const track = carousel.querySelector("[data-carousel-track]");
     const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
     const dotsWrap = carousel.querySelector("[data-carousel-dots]");
-    if (!track || slides.length < 2) return;
+    if (!track || slides.length < 2) {
+      carousel.querySelectorAll(".carousel-arrow, .carousel-dots").forEach((el) => {
+        el.hidden = true;
+      });
+      return;
+    }
 
     let index = 0;
 

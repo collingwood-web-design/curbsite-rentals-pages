@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=77" />
+  <link rel="stylesheet" href="styles.css?v=87" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,7 +51,7 @@
         "brand": { "@type": "Brand", "name": "Curbside Rentals" },
         "image": [
           "https://www.curbsiderentalsinc.com/assets/images/trucks/truck-front-angle.jpg",
-          "https://www.curbsiderentalsinc.com/assets/images/interior-cargo.jpeg"
+          "https://www.curbsiderentalsinc.com/assets/images/trucks/cargo-area.jpg"
         ],
         "offers": {
           "@type": "Offer",
@@ -143,7 +143,10 @@
           <div class="carousel-viewport">
             <ul class="carousel-track" data-carousel-track>
               <li class="carousel-slide" data-carousel-slide>
-                <img src="assets/images/trucks/truck-front-angle.jpg" alt="Curbside Rentals step van, front three-quarter view" width="828" height="729" fetchpriority="high" decoding="async" />
+                <img src="assets/images/trucks/truck-fleet.jpg" alt="Line of white Curbside Rentals step vans parked together" width="828" height="732" fetchpriority="high" decoding="async" />
+              </li>
+              <li class="carousel-slide" data-carousel-slide>
+                <img src="assets/images/trucks/truck-front-angle.jpg" alt="Curbside Rentals step van, front three-quarter view" width="828" height="729" loading="lazy" decoding="async" />
               </li>
               <li class="carousel-slide" data-carousel-slide>
                 <img src="assets/images/trucks/truck-driver-side.jpg" alt="Curbside Rentals step van, driver side view" width="828" height="729" loading="lazy" />
@@ -220,20 +223,37 @@
         </div>
         <article class="specs-feature">
           <figure class="specs-media">
-            <img src="assets/images/interior-cargo.jpeg" alt="Interior cargo area looking toward the cab" width="1024" height="1535" loading="lazy" />
+            <img src="assets/images/trucks/cargo-area.jpg" alt="Cargo area with shelving and loaded boxes, looking toward the cab" width="1024" height="1535" loading="lazy" />
           </figure>
           <h3>Cargo area</h3>
           <p>Generous floor space with built-in shelving and a roll-up rear door for dock-friendly loading.</p>
         </article>
       </div>
       <div class="specs-features">
-        <div class="spec-pair">
-          <figure class="spec-card">
-            <img src="assets/images/cargo-area.jpeg?v=2" alt="Driver area of the Curbside Rentals step van" width="1672" height="941" loading="lazy" />
-          </figure>
-          <figure class="spec-card">
-            <img src="assets/images/driver-area.jpg?v=3" alt="Driver area with seating and controls" width="1672" height="941" loading="lazy" />
-          </figure>
+        <div class="truck-carousel driver-carousel" data-carousel tabindex="0" aria-roledescription="carousel" aria-label="Driver area photos">
+          <div class="carousel-viewport">
+            <ul class="carousel-track" data-carousel-track>
+              <li class="carousel-slide" data-carousel-slide>
+                <img src="assets/images/cargo-area.jpeg?v=2" alt="Driver area of the Curbside Rentals step van" width="1672" height="941" loading="lazy" />
+              </li>
+              <li class="carousel-slide" data-carousel-slide>
+                <img src="assets/images/trucks/driver-area-1.jpg" alt="Cab fan and backup camera screen above the windshield" width="640" height="360" loading="lazy" />
+              </li>
+              <li class="carousel-slide" data-carousel-slide>
+                <img src="assets/images/trucks/driver-area-2.jpg" alt="Overhead radio, speakers, and safety notice in the cab" width="640" height="360" loading="lazy" />
+              </li>
+              <li class="carousel-slide" data-carousel-slide>
+                <img src="assets/images/trucks/driver-area-3.jpg" alt="Driver seat, steering wheel, and dash of the step van" width="640" height="360" loading="lazy" />
+              </li>
+            </ul>
+          </div>
+          <button class="carousel-arrow carousel-prev" type="button" data-carousel-prev aria-label="Previous photo">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="carousel-arrow carousel-next" type="button" data-carousel-next aria-label="Next photo">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+          <div class="carousel-dots" data-carousel-dots></div>
         </div>
         <div class="spec-pair-copy">
           <h3>Driver area</h3>
@@ -399,6 +419,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
