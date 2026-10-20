@@ -138,7 +138,7 @@ p:last-child {
   inset: 0 0 auto;
   z-index: 50;
   height: var(--header-h);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid transparent;
   transition: background 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
@@ -362,7 +362,7 @@ p:last-child {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: right center;
   filter: grayscale(0.55) contrast(1.02);
 }
 
@@ -372,9 +372,9 @@ p:last-child {
   pointer-events: none;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.68) 0%,
-    rgba(255, 255, 255, 0.32) 30%,
-    rgba(255, 255, 255, 0) 55%
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(255, 255, 255, 0.62) 34%,
+    rgba(255, 255, 255, 0) 62%
   );
 }
 
@@ -420,8 +420,35 @@ p:last-child {
 }
 
 @media (min-width: 901px) {
+  .hero-content {
+    justify-self: start;
+    width: fit-content;
+    max-width: min(32rem, calc(100% - 2.5rem));
+    margin-left: max(1.25rem, calc((100% - var(--shell)) / 2));
+    margin-right: auto;
+    padding: calc(var(--header-h) + 1.15rem) 1.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.86);
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.7rem, 3.5vw, 3rem);
+    width: max-content;
+    max-width: 100%;
+  }
+
+  .hero-veil {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.1) 40%,
+      rgba(255, 255, 255, 0) 64%
+    );
+  }
+
   .hero-content .hero-lede-reserve {
     visibility: hidden;
+    width: 16rem;
+    max-width: 100%;
   }
 
   .hero-lede-band {
@@ -571,7 +598,7 @@ p:last-child {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: right bottom;
 }
 
 .meet-hero-veil {
@@ -580,9 +607,9 @@ p:last-child {
   pointer-events: none;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.52) 0%,
-    rgba(255, 255, 255, 0.22) 30%,
-    rgba(255, 255, 255, 0) 55%
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.18) 38%,
+    rgba(255, 255, 255, 0) 62%
   );
 }
 
@@ -668,6 +695,17 @@ p:last-child {
   columns: 1 !important;
   max-width: 22rem !important;
   margin-bottom: 1.5rem !important;
+}
+
+@media (min-width: 901px) {
+  .meet-hero .meet-hero-content {
+    justify-self: start;
+    width: min(32rem, calc(100% - 3rem));
+    margin-left: max(1.25rem, calc((100% - var(--shell)) / 2));
+    margin-right: auto;
+    padding: 1.6rem 1.75rem 1.45rem;
+    background: rgba(255, 255, 255, 0.86);
+  }
 }
 
 /* How it works */
@@ -855,6 +893,10 @@ p:last-child {
 /* CTA */
 .section-cta {
   padding-top: 0;
+}
+
+.meet-hero + .section-cta {
+  padding-top: clamp(3.5rem, 8vw, 5.5rem);
 }
 
 .cta-band {
@@ -1782,7 +1824,7 @@ a.text-link[href^="mailto:"] {
 
   .hero-media img {
     object-fit: cover;
-    object-position: center bottom;
+    object-position: right center;
   }
 
   .hero-veil {
@@ -1796,9 +1838,9 @@ a.text-link[href^="mailto:"] {
     pointer-events: none;
     background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.7) 0%,
-      rgba(255, 255, 255, 0.35) 28%,
-      transparent 55%
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.55) 32%,
+      transparent 62%
     );
   }
 
@@ -1814,10 +1856,14 @@ a.text-link[href^="mailto:"] {
   .hero-content h1 {
     position: absolute;
     left: 0;
-    right: 0;
+    right: auto;
+    width: fit-content;
+    max-width: calc(100% - 1.5rem);
     top: calc(-1 * clamp(280px, 48vw, 420px) + var(--header-h) + 0.85rem);
     bottom: auto;
     margin: 0;
+    padding: 0.55rem 0.8rem;
+    background: rgba(255, 255, 255, 0.86);
     font-size: clamp(1.55rem, 3.4vw, 2.35rem);
     color: var(--black);
   }
@@ -1881,7 +1927,7 @@ a.text-link[href^="mailto:"] {
 
   .meet-hero-media img {
     object-fit: cover;
-    object-position: center bottom;
+    object-position: center center;
   }
 
   .meet-hero-veil {
@@ -1895,9 +1941,9 @@ a.text-link[href^="mailto:"] {
     pointer-events: none;
     background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.55) 0%,
-      rgba(255, 255, 255, 0.28) 28%,
-      transparent 55%
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(255, 255, 255, 0.55) 36%,
+      transparent 68%
     );
   }
 
